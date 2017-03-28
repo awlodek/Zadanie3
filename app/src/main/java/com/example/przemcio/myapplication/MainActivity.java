@@ -1,20 +1,39 @@
 package com.example.przemcio.myapplication;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 public class MainActivity extends AppCompatActivity {
+
+
+    public Button but1;
+    public void init()
+    {
+        but1=(Button)findViewById(R.id.button5);
+        but1.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v)
+            {
+                Intent toy= new Intent(MainActivity.this,obrazek.class);
+                startActivity(toy);
+            }
+        });
+
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_activity_app);
+        init();
+
 
 
         Button button = (Button) findViewById(R.id.button1);
@@ -54,7 +73,13 @@ public class MainActivity extends AppCompatActivity {
                 TextView textView2 = (TextView) findViewById(R.id.textView4);
                 textView2.setText(Nazwisko.getText().toString()+ " "+ Imie.getText().toString());
 
+                Context context;
+                context = getApplicationContext();
+                Intent intent = new Intent(context,obrazek.class);
+                startActivity(intent);
         }
         });
+
+
     }
 }

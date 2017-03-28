@@ -12,7 +12,8 @@
         android:layout_alignParentStart="true"
         android:weightSum="1"
         android:layout_gravity="center"
-        android:layout_alignParentEnd="true">
+        android:layout_alignParentEnd="true"
+        android:id="@+id/linearLayout">
 
         <LinearLayout
             android:id="@+id/linearLayout8"
@@ -155,10 +156,7 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></LinearLayout>
+
             <Button
                 android:id="@+id/button5"
                 android:layout_width="wrap_content"
@@ -166,7 +164,8 @@
                 android:layout_alignStart="@+id/editText2"
                 android:layout_below="@+id/editText2"
                 android:layout_gravity="center"
-                android:text="Submit" />
+                android:text="Submit"
+                />
 
         <TextView
             android:id="@+id/textView4"
@@ -179,4 +178,6 @@
             android:textSize="20dp"
             android:textColorLink="@color/colorPrimary" />
     </LinearLayout>
+
+
 </RelativeLayout>
